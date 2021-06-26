@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/stencil-demo.esm.js"></script>
+    <script nomodule src="/build/stencil-demo.js"></script>
+  </head>
+  <body>
+    <my-button label="Open Dialog"></my-button>
+    <my-dialog dialog-title="Welcome"><p>Welcome to stencil</p></my-dialog>
+    <my-dropdown></my-dropdown>
+    <script>
+      const myButton = document.querySelector('my-button')
+      const myDialog = document.querySelector('my-dialog')
+      myButton.addEventListener('click', (e) => {
+        myDialog.visible = true;
+      })
+      myDialog.addEventListener('confirm', () => {
+        console.log('confirm dialog')
+      })
+      myDialog.addEventListener('cancel', () => {
+        console.log('cancel dialog')
+      })
+
+      const myDropdown = document.querySelector('my-dropdown')
+      myDropdown.data = [
+        {
+          label: 'Swimming',
+          value: 'swimming'
+        },
+        {
+          label: 'Singing',
+          value: 'singing'
+        }];
+      myDropdown.addEventListener('selected', (e) => {
+        console.log(e.detail)
+      })
+    </script>
+  </body>
+</html>
