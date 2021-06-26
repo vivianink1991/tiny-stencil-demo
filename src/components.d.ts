@@ -52,7 +52,7 @@ declare global {
 declare namespace LocalJSX {
     interface MyButton {
         "label"?: string;
-        "onClickButton"?: (event: CustomEvent<any>) => void;
+        "onClicked"?: (event: CustomEvent<any>) => void;
     }
     interface MyDialog {
         "cancelText"?: string;

@@ -9,14 +9,14 @@
   "types": "dist/custom-elements/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/stencil-demo/stencil-demo.esm.js",
+  "unpkg": "dist/tiny-stencil-demo/tiny-stencil-demo.esm.js",
   "files": [
     "dist/",
     "loader/"
   ],
   "scripts": {
     "build": "stencil build --docs-readme",
-    "start": "stencil build --dev --watch --serve",
+    "serve": "stencil build --dev --watch --serve",
     "build:docs-json": "stencil build --docs-json docs-json",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",

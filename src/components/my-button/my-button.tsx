@@ -8,10 +8,10 @@ import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
 export class MyButton {
   @Prop() label: string = 'Click Me!';
 
-  @Event() clickButton: EventEmitter;
+  @Event() clicked: EventEmitter;
 
   handleButtonClick() {
-    this.clickButton.emit()
+    this.clicked.emit()
   }
 
   render() {

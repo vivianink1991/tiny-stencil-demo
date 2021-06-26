@@ -18,6 +18,7 @@ div, ul, li {
   padding: 0 16px;
   font-size: 16px;
   font-weight: bold;
+  text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
   cursor: pointer;
@@ -54,6 +55,7 @@ div, ul, li {
   padding: 0 20px;
   font-size: 15px;
   border-top: 1px solid #eee;
+  text-align: left;
 }
 .item.selected {
   color: #0088c6;
