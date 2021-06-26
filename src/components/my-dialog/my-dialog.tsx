@@ -6,27 +6,32 @@ import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
   shadow: true,
 })
 export class MyDialog {
-  @Prop({mutable: true}) visible: boolean = false;
+  @Prop() visible: boolean = false;
   @Prop() dialogTitle: string;
   @Prop() confirmText: string = 'Confirm';
   @Prop() cancelText: string = 'Cancel';
   @Prop() showConfirmBtn: boolean = true;
   @Prop() showCancelBtn: boolean = true;
-
-  _clickCloseHandler() {
-    this.visible = false
-  }
   
   @Event() confirm: EventEmitter;
   _cancelBtnHandler() {
     this.confirm.emit()
-    this.visible = false
+    this._closeHandler()
   }
   
   @Event() cancel: EventEmitter;
   _confirmBtnHandler() {
     this.confirm.emit()
-    this.visible = false
+    this._closeHandler()
+  }
+
+  @Event() close: EventEmitter;
+  _closeHandler() {
+    this.close.emit()
+  }
+
+  _clickCloseHandler() {
+    this.close.emit()
   }
   
   render() {

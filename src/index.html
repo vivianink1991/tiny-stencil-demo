@@ -24,6 +24,9 @@
       myDialog.addEventListener('cancel', () => {
         console.log('cancel dialog')
       })
+      myDialog.addEventListener('close', () => {
+        myDialog.visible = false
+      })
 
       const myDropdown = document.querySelector('my-dropdown')
       myDropdown.data = [

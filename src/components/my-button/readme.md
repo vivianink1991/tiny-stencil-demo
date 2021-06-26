@@ -14,9 +14,9 @@
 
 ## Events
 
-| Event         | Description | Type               |
-| ------------- | ----------- | ------------------ |
-| `clickButton` |             | `CustomEvent<any>` |
+| Event     | Description | Type               |
+| --------- | ----------- | ------------------ |
+| `clicked` |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------

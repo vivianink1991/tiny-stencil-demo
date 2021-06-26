@@ -59,6 +59,7 @@ declare namespace LocalJSX {
         "confirmText"?: string;
         "dialogTitle"?: string;
         "onCancel"?: (event: CustomEvent<any>) => void;
+        "onClose"?: (event: CustomEvent<any>) => void;
         "onConfirm"?: (event: CustomEvent<any>) => void;
         "showCancelBtn"?: boolean;
         "showConfirmBtn"?: boolean;
